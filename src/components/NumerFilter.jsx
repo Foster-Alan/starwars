@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
 
-function NumericFilter() {
+function NumerFilter() {
   const {
     handleButtonFilter,
     columnOption,
@@ -91,4 +91,4 @@ function NumericFilter() {
   );
 }
 
-export default NumericFilter;
+export default NumerFilter;

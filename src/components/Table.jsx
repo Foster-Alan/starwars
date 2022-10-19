@@ -48,7 +48,7 @@ function Table() {
         </table>
       ) }
       { (!loading && dataFilter.length === 0)
-      && <h2>Invalid Search</h2>}
+      && <h2>Invalid</h2>}
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import NameFilter from './NameFilter';
-import NumericFilter from './NumericFilter';
+import NumerFilter from './NumerFilter';
+import DisplayFilters from './DisplayFilters';
 
 function PlanetSeatch() {
   return (
@@ -7,8 +8,9 @@ function PlanetSeatch() {
       <NameFilter />
       <div>
 
-        <NumericFilter />
+        <NumerFilter />
       </div>
+      <DisplayFilters />
 
     </section>
   );
