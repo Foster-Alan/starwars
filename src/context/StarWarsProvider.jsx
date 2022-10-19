@@ -37,7 +37,7 @@ function StarWarsProvider({ children }) {
         return Number(planet[curr.column]) > Number(curr.value);
       } if (curr.comparison === 'menor que') {
         return Number(planet[curr.column]) < Number(curr.value);
-      }
+      };
       return Number(planet[curr.column]) === Number(curr.value);
     });
     return newAcc;
