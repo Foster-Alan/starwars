@@ -5,12 +5,10 @@ function Table() {
   const { dataFilter, loading } = useContext(StarWarsContext);
 
   return (
-    <section className="table-container">
-      { loading && <h2 className="loading-table">Loading...</h2> }
+    <section>
+      { loading && <h2>Loading...</h2> }
       { (!loading && dataFilter.length > 0) && (
-        <table
-          className="table table-hover table-dark table-sm align-middle table-bordered"
-        >
+        <table>
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -50,7 +48,7 @@ function Table() {
         </table>
       ) }
       { (!loading && dataFilter.length === 0)
-      && <h2 className="invalid-text">Invalid Search</h2>}
+      && <h2>Invalid Search</h2>}
     </section>
   );
 }

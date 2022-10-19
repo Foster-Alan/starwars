@@ -92,7 +92,7 @@ function StarWarsProvider({ children }) {
     if (curr[column] === 'unknown') {
       acc.arrayString.push(curr);
       return acc;
-    }   
+    }
     acc.arrayNumber.push(curr);
     return acc;
   }, {
