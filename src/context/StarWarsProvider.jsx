@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import StarWarsContext from './StarWarsContext';
 import sortByPopulationASC from '../helpers/sortServices';
@@ -123,8 +123,7 @@ function StarWarsProvider({ children }) {
     setDataFilter(sortedArrayData);
   };
 
-  // eslint-disable-next-line react/jsx-no-constructed-context-values
-  const contextValue = {
+  const contextValue = useMemo(() => ({
     columnOption,
     dataFilter,
     filterByName,
@@ -137,8 +136,10 @@ function StarWarsProvider({ children }) {
     handleRemoveAllFilters,
     handleSort,
     setFilterByName,
-  };
-
+  }
+  ), [columnOption, dataFilter, filterByName,
+    filterByNumber, filters, handleButtonFilter,
+    handleRemoveAllFilters, handleRemoveFilter, handleSort, loading, order]);
   return (
     <StarWarsContext.Provider value={ contextValue }>
       {children}
