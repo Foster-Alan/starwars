@@ -23,21 +23,18 @@ function NumerFilter() {
 
   return (
     <form>
-      {columnOption.length >= 1 ? (
-        <label htmlFor="column-filter">
-          <select
-            data-testid="column-filter"
-            value={ filterColumn }
-            name="column-filter"
-            id="column-filter"
-            onChange={ ({ target: { value } }) => setFilterColumn(value) }
-          >
-            { renderColumnOptions() }
-          </select>
-        </label>
-      ) : (
-        <div>Maximum Filters</div>
-      )}
+
+      <label htmlFor="column-filter">
+        <select
+          data-testid="column-filter"
+          value={ filterColumn }
+          name="column-filter"
+          id="column-filter"
+          onChange={ ({ target: { value } }) => setFilterColumn(value) }
+        >
+          { renderColumnOptions() }
+        </select>
+      </label>
 
       <label htmlFor="comparison-filter">
         <select
