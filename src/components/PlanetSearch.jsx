@@ -1,6 +1,7 @@
 import NameFilter from './NameFilter';
 import NumerFilter from './NumerFilter';
 import DisplayFilters from './DisplayFilters';
+import SortPlanet from './SortPlanet';
 
 function PlanetSeatch() {
   return (
@@ -9,6 +10,7 @@ function PlanetSeatch() {
       <div>
 
         <NumerFilter />
+        <SortPlanet />
       </div>
       <DisplayFilters />
 
