@@ -37,8 +37,8 @@ describe('test', () => {
   it('tentando o 100%', async () => {
     render(<App />)
 
-    const planetaTatooine = await screen.findByText(/tatooine/i, {}, {timeout: 15000});
-    expect(planetaTatooine).toBeInTheDocument();
+    const tatooine = await screen.findByText(/tatooine/i, {}, {timeout: 15000});
+    expect(tatooine).toBeInTheDocument();
    
     const columnSort = screen.getByTestId('column-sort');
     const columnSortInputAsc = screen.getByTestId('column-sort-input-asc');
