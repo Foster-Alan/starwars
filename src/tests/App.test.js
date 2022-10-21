@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import StarWarsProvider from '../context/StarWarsProvider';
 import App from '../App';
 import userEvent from '@testing-library/user-event'
 import testData from '../../cypress/mocks/testData';
@@ -55,12 +56,6 @@ it('I am your test 2', async () => {
 
   userEvent.click(btnExcluir);
 
-
-  // await screen.findByTestId('planet-name');
-  // const table2 = await screen.findByTestId('table-2');
-  // expect(table2).toBeInTheDocument();
-  //  const table2 = await screen.findByTestId('table-2');
-  // expect(table2).toBeInTheDocument();
   
 
 });
@@ -72,8 +67,10 @@ it('I am your test 3', async () => {
   render(<App />);
 
  
-  const Tatooine = await screen.findByText(/Tatooine/i);
-  expect(Tatooine).toBeInTheDocument();
+  // const Tatooine = await screen.findByText(/Tatooine/i);
+  // expect(Tatooine).toBeInTheDocument();
+  const planetaTatooine = await screen.findByText(/tatooine/i, {}, {timeout: 15000});
+    expect(planetaTatooine).toBeInTheDocument();
 
   const nameFilter = screen.getByTestId('name-filter');
   const columFilter = screen.getByTestId('column-filter');
@@ -84,6 +81,7 @@ it('I am your test 3', async () => {
   const columnSortInputAsc = screen.getByTestId('column-sort-input-asc');
   const columnSortInputDesc = screen.getByTestId('column-sort-input-desc');
   const columnSortButton = screen.getByTestId('column-sort-button');
+
   
   userEvent.type(nameFilter, 'ok');
   userEvent.click(buttonFilter)
@@ -97,6 +95,7 @@ it('I am your test 3', async () => {
   userEvent.selectOptions(columnSort, 'orbital_period');
   userEvent.selectOptions(compareFilter, 'igual a');
   userEvent.click(buttonFilter)
+  userEvent.click(buttonFilter)
   // const um = screen.getByText('population maior que 0')
   // const dois = screen.getByText('orbital_period maior que 0200')
   // const tres = screen.getByText('diameter igual a 0200')
@@ -105,10 +104,28 @@ it('I am your test 3', async () => {
   // expect(tres).toBeInTheDocument();
   
   // await screen.findByTestId('filter');
+  const btnExcluir = screen.getAllByRole('button', {
+    name: /excluir/i
+  })
 
 
+  btnExcluir.forEach((e) => {
+    userEvent.click(e)
+  })
 
+  
+  userEvent.selectOptions(columFilter, 'population');
+  userEvent.selectOptions(compareFilter, 'maior que');
+  userEvent.type(valueFilter, '10');
+  userEvent.click(buttonFilter);
 
+  userEvent.selectOptions(columFilter, 'diameter');
+  userEvent.selectOptions(compareFilter, 'maior que');
+  userEvent.type(valueFilter, '2');
+  userEvent.click(buttonFilter);
 
+  const buttonRemoveFilters = screen.getByTestId('button-remove-filters');
 
+  userEvent.click(buttonRemoveFilters);
+  // expect(StarWarsProvider()).toEqual('function');
 });

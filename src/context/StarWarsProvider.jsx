@@ -103,6 +103,7 @@ function StarWarsProvider({ children }) {
   const orderDataFilterBySort = (arrayString, arrayNumber, { column, sort }) => {
     switch (sort) {
     case 'ASC':
+      console.log('test case');
       return [
         ...arrayNumber.sort((a, b) => a[column] - b[column]),
         ...arrayString,
