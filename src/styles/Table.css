@@ -1,0 +1,16 @@
+.table-conteiner th {
+    /* border: dashed rgb(255, 255, 255, 0.5) 1px; */
+    border: dashed rgb(249, 210, 0, 0.5) 1px;
+    padding: 5px;
+}
+
+.table-conteiner td {
+    /* border: dashed rgb(255, 255, 255, 0.5) 1px; */
+    border: dashed rgb(249, 210, 0, 0.5) 1px;
+    padding: 5px;
+}
+
+.table-conteiner a {
+    /* display: flex; */
+    color: rgb(249 210 0);
+}

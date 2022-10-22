@@ -1,0 +1,55 @@
+.name-filter {
+    display: flex;
+    justify-content: center;
+}
+
+.name-filter input {
+    text-align: center;
+    width: 525px;
+}
+
+.filters {
+    /* border: solid red 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-filters ul {
+    display: flex;
+    flex-direction: column;
+    /* border: solid red 1px; */
+    gap: 5px;
+
+}
+
+.all-filters li {
+    display: flex;
+    /* border: solid green 1px; */
+    color: rgb(249 210 0);
+    margin: 0 500px;
+    justify-content: space-between;
+    /* gap: 5px; */
+}
+
+.all-filters li button {
+    background-color: black;
+    border: transparent;
+}
+
+
+.all-filters {
+    /* border: solid 1px red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filters select {
+    text-align: center;
+}
+
+.filters button {
+    background-color: rgb(249 210 0);
+    border: solid black 1px;
+}

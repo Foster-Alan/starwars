@@ -10,7 +10,7 @@ function NameFilter() {
   }, [setFilterByName, filterName]);
 
   return (
-    <form>
+    <form className="name-filter">
       <label htmlFor="name-filter">
         <input
           type="text"

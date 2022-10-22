@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
+
+
+header h2 {
+    animation-name: fadeout;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fed34f !important;
+    position: fixed;
+    top: 10px;
+    opacity: 60%;
+    transform: perspective(300px) rotateX(25deg);
+}
+
+@keyframes fadeout {
+    0% {
+        transform: rotateX(35deg) translateY(80%);
+    }
+
+    100% {
+        transform: rotateX(35deg) perspective(300px) rotateX(25deg) translateY(-150%);
+        transform: ;
+    }
+}

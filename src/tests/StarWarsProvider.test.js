@@ -50,10 +50,6 @@ describe('test', () => {
 
       userEvent.selectOptions(columnSort, 'population');
       userEvent.click(columnSortInputDesc);
-      userEvent.click(columnSortButton)
-
-      
+      userEvent.click(columnSortButton)   
   },)
-
-
 })

@@ -1,11 +1,18 @@
 import React, { useContext } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
+import '../styles/Table.css';
 
 function Table() {
   const { dataFilter } = useContext(StarWarsContext);
 
+  const createLink = (linkList, string) => (linkList.map((link, index) => (
+    <a href={ link } key={ `${string}-${index}` }>
+      {`${link.split('/')[5]}º`}
+    </a>
+  )));
+
   return (
-    <section>
+    <section className="table-conteiner">
 
       <table>
         <thead data-testid="table-1">
@@ -37,10 +44,10 @@ function Table() {
               <td>{ planet.terrain }</td>
               <td>{ planet.surface_water }</td>
               <td>{ planet.population }</td>
-              <td>{ planet.films }</td>
+              <td>{ createLink(planet.films, 'film') }</td>
               <td>{ planet.created }</td>
               <td>{ planet.edited }</td>
-              <td>{ planet.url }</td>
+              <td><a href={ planet.url }>Link</a></td>
             </tr>
           ))}
         </tbody>
