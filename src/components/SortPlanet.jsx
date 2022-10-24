@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import StarWarsContext from '../context/StarWarsContext';
 import { INICIAL_COLUMN_OPTIONS } from '../helpers/inicialStates';
 
-
 function SortPlanet() {
   const { handleSort } = useContext(StarWarsContext);
   const [sortColumn, setSortColumn] = useState('population');

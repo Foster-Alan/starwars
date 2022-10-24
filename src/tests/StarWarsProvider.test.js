@@ -14,8 +14,8 @@ describe('test', () => {
   const buttonFilter = screen.getByTestId('button-filter');
     
 
-    const planetaTatooine = await screen.findByText(/tatooine/i, {}, {timeout: 15000});
-    expect(planetaTatooine).toBeInTheDocument();
+    const tatooine = await screen.findByText(/tatooine/i, {}, {timeout: 15000});
+    expect(tatooine).toBeInTheDocument();
 
     userEvent.selectOptions(columFilter, 'orbital_period');
     userEvent.selectOptions(compareFilter, 'maior que');

@@ -32,6 +32,6 @@ header h2 {
 
     100% {
         transform: rotateX(35deg) perspective(300px) rotateX(25deg) translateY(-150%);
-        transform: ;
+
     }
 }
