@@ -47,7 +47,7 @@ function Table() {
               <td>{ createLink(planet.films, 'film') }</td>
               <td>{ planet.created }</td>
               <td>{ planet.edited }</td>
-              <td><a href={ planet.url }>Link</a></td>
+              <td><a target="_blank" rel="noreferrer" href={ planet.url }>Link</a></td>
             </tr>
           ))}
         </tbody>
@@ -56,5 +56,7 @@ function Table() {
     </section>
   );
 }
+
+// test
 
 export default Table;
