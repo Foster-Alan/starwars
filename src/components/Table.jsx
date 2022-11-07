@@ -6,7 +6,7 @@ function Table() {
   const { dataFilter } = useContext(StarWarsContext);
 
   const createLink = (linkList, string) => (linkList.map((link, index) => (
-    <a href={ link } key={ `${string}-${index}` }>
+    <a target="_blank" rel="noreferrer" href={ link } key={ `${string}-${index}` }>
       {`${link.split('/')[5]}º`}
     </a>
   )));
