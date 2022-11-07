@@ -3,11 +3,12 @@ import '../styles/Header.css';
 import starwars from '../img/starwars.png';
 
 function Header() {
+  const tempo = 8000;
   setTimeout(() => {
     const a = document.getElementById('div-teste');
 
     a.style = 'display:none';
-  }, 8000);
+  }, tempo);
 
   return (
     <header>
